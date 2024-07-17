@@ -17,7 +17,7 @@ const LoginPage = () => {
         signIn(values)
     })
     return (
-        <div className='container mx-auto w-full flex justify-center items-center h-screen'>
+        <div className='container mx-auto w-full flex justify-center items-center h-[calc(100vh-150px)]'>
 
             <div className='bg-zinc-800 min-w-[500px] rounded-md py-8 px-16'>
 

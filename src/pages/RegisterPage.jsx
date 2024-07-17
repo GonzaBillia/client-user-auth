@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { useAuth } from '../context/AuthContext'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 
 const RegisterPage = () => {
 
@@ -20,13 +20,16 @@ const RegisterPage = () => {
     return (
         <div className='container mx-auto w-full flex justify-center items-center h-screen'>
 
-            <div className='bg-zinc-800 max-w-3xl rounded-md p-16'>
+            <div className='bg-zinc-800 min-w-[500px] rounded-md py-8 px-16'>
+
+            <h1 className='text-3xl font-bold mb-2'>Register</h1>
+
 
                 {registerErr.map((err, i) => (
-                    <div className='bg-red-500 p-2 mb-2' key={i}>{err}</div>
+                    <div className='bg-red-500 p-2 my-2' key={i}>{err}</div>
                 ))}
 
-                <form onSubmit={onSubmit} className='flex flex-col jusstify-center items-center gap-4'>
+                <form onSubmit={onSubmit} className='flex flex-col justify-center items-center gap-4 py-8'>
 
                     <input type="text" {...register("username", { required: true })} id="username-input" placeholder='Username' className='bg-zinc-600 rounded-md w-full p-2' />
                     {errors.username && <p className='text-red-500'>This field is required</p>}
@@ -40,6 +43,9 @@ const RegisterPage = () => {
                     <button type="submit" className='bg-zinc-300 rounded-md w-[70%] text-black'>Register</button>
 
                 </form>
+                <p className='flex gap-x-2'>
+                    Already have an account? <Link to={'/login'} className='text-blue-500'>Login</Link>
+                </p>
             </div>
 
         </div>

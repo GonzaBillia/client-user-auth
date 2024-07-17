@@ -1,6 +1,7 @@
 import { createContext, useState, useContext, useEffect } from "react"
 import { loginReq, registerReq, verifyTokenReq } from '../api/auth'
 import Cookies from "js-cookie"
+import { useTask } from "./TaskContext"
 
 export const AuthContext = createContext()
 

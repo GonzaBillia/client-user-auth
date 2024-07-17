@@ -1,9 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
+import { useTask } from '../context/TaskContext'
 
 function Navbar() {
     const {isAuth, logout, user} = useAuth()
+    const {setTasks} = useTask()
     return (
         <nav className='flex justify-between items-center bg-zinc-700 py-5 px-32 mx-auto'>
             {isAuth ? (
@@ -20,8 +22,8 @@ function Navbar() {
                     <>
                         <li>Welcome, <span className='font-bold text-green-500'>{user.username}</span></li>
                         <li className='bg-indigo-700 rounded-md text-white px-3'><Link to="/add-task">Add Task</Link></li>
-                        <li><Link to={`/profile/${user._id}`}>Profile</Link></li>
-                        <li><Link to="/" onClick={() => logout()}>Logout</Link></li>
+                        <li><Link to={`/profile/${user.id}`}>Profile</Link></li>
+                        <li><Link to="/" onClick={() =>{setTasks([]), logout()}}>Logout</Link></li>
                     </>
                 ) : (
                     <>

@@ -20,21 +20,21 @@ function App() {
         <Navbar />
         <Routes>
 
-          <Route path="/" element={<HomePage />} />
+          <Route path="/client-user-auth/" element={<HomePage />} />
 
-          <Route path="/login" element={<LoginPage />} />
+          <Route path="/client-user-auth/login" element={<LoginPage />} />
 
-          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/client-user-auth/register" element={<RegisterPage />} />
 
           
             <Route element={<ProtectedRoute />}>
-              <Route path="/tasks" element={<TasksPage />} />
+              <Route path="/client-user-auth/tasks" element={<TasksPage />} />
 
-              <Route path="/add-task" element={<TaskFormPage />} />
+              <Route path="/client-user-auth/add-task" element={<TaskFormPage />} />
 
-              <Route path="/task/:id" element={<TaskFormPage />} />
+              <Route path="/client-user-auth/task/:id" element={<TaskFormPage />} />
 
-              <Route path="/profile/:id" element={<ProfilePage />} />
+              <Route path="/client-user-auth/profile/:id" element={<ProfilePage />} />
             </Route>
           
         </Routes>

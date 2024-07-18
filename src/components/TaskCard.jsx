@@ -14,7 +14,7 @@ function TaskCard({ task }) {
                 <h3 className='text-2xl font-bold '>{task.title}</h3>
 
                 <div className='flex gap-x-4 items-center'>
-                    <Link to={`/task/${task._id}`} className='bg-blue-500 rounded-md px-2'>Edit</Link>
+                    <Link to={`/client-user-auth/task/${task._id}`} className='bg-blue-500 rounded-md px-2'>Edit</Link>
                     <button className='bg-red-500 rounded-md px-2' onClick={() => deleteTask(task._id)}>Delete</button>
                 </div>
             </div>

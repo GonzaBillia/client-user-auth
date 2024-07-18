@@ -29,7 +29,7 @@ const TaskFormPage = () => {
                 date: dayjs.utc(data.date).format()
             })
         }
-        navigate('/tasks')
+        navigate('/client-user-auth/tasks')
     })
 
     useEffect(() => {

@@ -10,7 +10,7 @@ const LoginPage = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        if(isAuth) navigate('/tasks')
+        if(isAuth) navigate('/client-user-auth/tasks')
     },[isAuth])
 
     const onSubmit = handleSubmit(async(values) => {
@@ -39,7 +39,7 @@ const LoginPage = () => {
 
                 </form>
                 <p className='flex gap-x-2'>
-                    Don't have an account? <Link to={'/register'} className='text-blue-500'>Register</Link>
+                    Don't have an account? <Link to={'/client-user-auth/register'} className='text-blue-500'>Register</Link>
                 </p>
             </div>
 

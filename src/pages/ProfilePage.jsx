@@ -22,7 +22,7 @@ const ProfilePage = () => {
                         <h4>{user.email}</h4>
                     </div>
                     <div className=' bg-indigo-700 rounded-md text-white px-3'>
-                        <Link to="/tasks">
+                        <Link to="/client-user-auth/tasks">
                             <h1 className='text-xl font-bold'>Back to Tasks</h1>
                         </Link>
                     </div>
